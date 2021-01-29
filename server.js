@@ -8,7 +8,7 @@ const blogRoutes = require('./routes/blogRoutes');
 
 // connect to mongodb & listen for requests
 mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(result => app.listen(3000))
+  .then(result => app.listen(process.env.PORT || 80))
   .catch(err => console.log(err));
 
 
